@@ -1,0 +1,49 @@
+// Right-panel info per page.
+//   summary: one short paragraph shown beside the page
+//   plan:    which plans include it (only filled where the draft states it)
+//   added:   when the feature shipped, e.g. 'v1.4 · Mar 2026'  <-- fill these in
+//   updated: when the page was last revised
+export const UPDATED = 'Nov 10, 2026'
+
+export const pageMeta = {
+  welcome: { summary: 'An overview of Reports Builder and a four-step path through the docs: Getting Started, Reports, Schedules, then FAQ.' },
+  'first-time-setup': { summary: 'Two skippable setup screens after install: add your report email and phone, then pick your store type. The first data sync starts on its own.' },
+  'navigation-bar': { summary: 'The top bar has a title area, the dark navigation pill with the main menu, and small controls. The Create new report button changes depending on the page you are on.' },
+  'top-bar-controls': { summary: 'The Guide, Notifications, Rate and Language buttons, the kinds of notifications you can get, and the pop-ups and dialogs the app shows.' },
+  dashboard: { summary: 'A greeting and sync card, four 30-day number cards, a nine-month sales trend chart, and lists of popular and favorite reports and recent activity.' },
+  'first-report': { summary: 'Open a template from the Library, set a date range, tweak filters and columns, save it, then export or schedule it. A report must be saved before it can be scheduled.' },
+  library: { summary: '137 ready-made report templates in 16 categories. Search by name, use the quick-topic panel, browse a category, or start a blank report.' },
+  'create-report': { summary: 'Select Create new report, name the report, choose Generate with AI or Build from Scratch, then Continue, pick a report type and create it. Templates and the Dashboard are other ways in.' },
+  'report-page': { summary: 'The toolbar above the table shapes a report: date range, columns, filters, sort, group by, formatting, export and schedule. Changes show instantly; Save keeps them.' },
+  'columns-filters': { summary: 'Choose and reorder columns, filter rows by column, operator and value, and sort or group the results. Greater-than, less-than and OR filters need Pro.', plan: 'Basic: all plans · Advanced: Pro, Enterprise' },
+  formatting: { summary: 'Control currency, decimals, totals, percentages and print options for every report.' },
+  export: { summary: 'Download a report as CSV, Excel, PDF or Google Sheets. PDF uses your browser print dialog.', plan: 'Pro, Enterprise' },
+  'save-schedule': { summary: 'Save stores a report in My Reports. Schedule automates delivery and asks you to save first if there are unsaved changes.' },
+  'calculated-columns': { summary: 'Build a new column from a formula using field names and + - * / with parentheses, and use uploaded CSV files as a data source.', plan: 'Pro, Enterprise' },
+  'my-reports': { summary: 'Every saved report with its creation date and schedule. Star favorites, open, schedule or delete a report (deleting cannot be undone).' },
+  'schedule-page': { summary: 'See all reports with their frequency, recipients, format and next run. Filter by scheduled status, pause, resume or delete a schedule.' },
+  'create-schedule': { summary: 'A wizard with report, frequency (hourly, daily, weekly, monthly), timing and delivery screens, then a summary. Shorter months run on their last day.' },
+  'delivery-options': { summary: 'Set the primary recipient with optional Cc/Bcc, pick CSV or Excel, and choose where the file goes. Email is the default.' },
+  'delivery-destinations': { summary: 'Connect Email sender, FTP, Google Drive, OneDrive, BigQuery, Slack or Power BI in Schedule Settings. You can connect several accounts of one type.' },
+  'connect-destinations': { summary: 'Search and connect destination cards, test a connection, send a test file, add more accounts, and set up the Email sender with a verification email.' },
+  'schedule-defaults': { summary: 'Starting choices for new schedules: destinations, file type, time zone and a file name pattern using {report name} and {date}.' },
+  'delivery-history': { summary: 'Every delivery attempt with status, destination, time and size. Filter by status and retry failed deliveries.' },
+  'what-syncs': { summary: 'Reports Builder keeps its own copy of orders, products, customers, abandoned carts, customer journey, metafields and payouts so reports open fast.' },
+  'how-syncing-works': { summary: 'An automatic first sync, hourly checks, live updates from Shopify and a daily reconciliation. You are warned if no sync succeeds for 24 hours.' },
+  'data-sync-page': { summary: 'Run Sync Now, a Full Re-sync or a Reconcile, and see totals, the current run, health values, your last 20 runs and background jobs.' },
+  'data-sync-history': { summary: 'A table of each data type with its last update time, plus a Force Sync button that starts a sync.' },
+  'data-management': { summary: 'Switch customer, journey, shipping, presentment, metafield and abandoned cart syncing on or off. Each switch saves at once and shows a message.' },
+  'csv-data-sources': { summary: 'Upload your own CSV and use it in reports beside or instead of Shopify data. Source and row limits depend on your plan.', plan: 'All plans (limits vary)' },
+  'settings-overview': { summary: 'The Settings menu groups nine screens inside Settings and three that open as their own page. Most changes save as soon as you make them.' },
+  'account-details': { summary: 'Your store, plan, time zone and report email, plus the Shop Key, the private MCP Access URL for Claude, and Log out.' },
+  'report-formatting': { summary: 'Four store-wide choices: week start, whether "last N days" includes today, currency symbols and CSV encoding.' },
+  'user-management': { summary: 'Invite teammates as Admin, Manager or Viewer, change roles, disable or remove them, and review the activity log.' },
+  'staff-details': { summary: 'Your list of people who make sales, added manually or imported by pasting from Shopify or uploading a CSV. Used by staff and commission reports.' },
+  'staff-assignment': { summary: 'Assign orders to staff members, one at a time or in bulk, so staff-based reports are accurate.' },
+  'commission-setup': { summary: 'Define percentage or fixed commission rates by vendor, staff member or product type, calculated on net, gross or total sales.' },
+  plans: { summary: 'Free ($0), Pro ($19) and Enterprise ($49), billed every 30 days through your Shopify bill. Includes the Subscription and Pricing pages.', plan: 'All plans' },
+  'claude-connector': { summary: 'Generate a private MCP Access URL and add it to Claude as a custom connector to ask questions about your saved reports.' },
+  faq: { summary: 'Short answers about exports, saved-report limits, schedules, data freshness and billing.' },
+  troubleshooting: { summary: 'Checks for empty reports, mismatched numbers, missing orders, blank columns, missed deliveries, CSV refusals, access and stale data.' },
+  support: { summary: 'The Support page currently holds the app Terms and Conditions in six numbered parts.' },
+}
