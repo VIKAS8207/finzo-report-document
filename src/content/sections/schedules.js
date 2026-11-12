@@ -1,4 +1,4 @@
-import { p, h2, ul, ol, table, shot } from '../builders'
+import { p, h2, ul, ol, table, shot, image } from '../builders'
 
 /** Section: Schedules */
 export default {
@@ -40,16 +40,24 @@ export default {
       intro: 'A step-by-step wizard sets up delivery.',
       blocks: [
         p('Select **Schedule a report** from the Dashboard, open the Schedule page, or choose **Schedule** on a saved report. The wizard shows a progress bar with its steps along the top. Every screen has **Back** and **Continue** buttons. The last one says **Create schedule**.'),
-        h2('The schedule wizard, screen by screen'),
-        table(
-          ['Screen', 'What you do'],
-          [
-            ['Report', 'Choose one of your saved reports. If you have none, it says *No reports yet*. This screen is skipped when you start from a report.'],
-            ['Frequency', 'Choose a card: **Hourly** (run every hour or right after data syncs), **Daily** (every morning with fresh daily metrics), **Weekly** (a weekly digest on your preferred day) or **Monthly** (a wrap-up on the 1st, 15th or last day).'],
-            ['Timing', 'Set the time and, for weekly or monthly, the day. Hourly has a **Start immediately** switch.'],
-            ['Delivery', 'Enter the recipient email, optional Cc and Bcc, the **Export format** (CSV or Excel) and the **Delivery destination**. Below it, a **Schedule summary** lets you review the details before creating the schedule.'],
-          ],
-        ),
+        h2('Screen 1: Report'),
+        p('Choose one of your saved reports. If you have none, it says *No reports yet*. This screen is skipped when you start from a report.'),
+        image('schedule-wizard-report.png', 'Choose report', { width: 620, center: true }),
+        h2('Screen 2: Frequency'),
+        p('Choose a card: **Hourly** (run every hour or right after data syncs), **Daily** (every morning with fresh daily metrics), **Weekly** (a weekly digest on your preferred day) or **Monthly** (a wrap-up on the 1st, 15th or last day).'),
+        image('schedule-wizard-frequency.png', 'Select frequency (Weekly chosen)', { width: 620, center: true }),
+        h2('Screen 3: Timing'),
+        p('Set when the report is generated and sent. For a weekly report, pick a **Day of week** (Mon to Sun) and a **Delivery time**: choose the hour and minute, and the time of day shows beside it, for example *(9:00 AM)*. Monthly reports ask for a day of the month instead. Hourly has a **Start immediately** switch.'),
+        image('schedule-wizard-timing.png', 'Set timing', { width: 620, center: true }),
+        h2('Screen 4: Delivery'),
+        ul([
+          '**Recipients.** Enter the primary email address. Select **+ Add Cc / Bcc** to copy other people.',
+          "**Delivery destination.** Choose **Email**, or a destination you have already connected, such as Google Sheets or Google Drive. If you pick a connected destination you can skip the recipients.",
+          '**Export format.** Choose **CSV** (plain comma-separated file, opens in any spreadsheet app), **Excel** (native workbook with one worksheet) or **PDF** (print-ready table, good for sharing and archiving).',
+          'Below these, a **Schedule summary** lets you review the details before you create the schedule.',
+        ]),
+        image('schedule-wizard-delivery.png', 'Delivery details', { width: 620, center: true }),
+        h2('Summary and finish'),
         p('The summary lists the report, the frequency, who it is delivered to, the format and the next run. If you have not entered an email address, it says *Email address not entered yet*.'),
         p('When you finish, the wizard shows **Schedule set**. It repeats the first delivery time, the recipients and the format. From there you can go back to the Schedule page or choose **Schedule another**.'),
         h2('Timing options'),
@@ -75,6 +83,17 @@ export default {
           '**Format.** CSV opens in any spreadsheet app. Excel gives a native workbook with one worksheet.',
           '**Delivery destination.** Email is the default. If you connected other destinations, they appear here as choices.',
         ]),
+        h2('Where deliveries are managed'),
+        p('Destinations, defaults and the delivery log live in *Settings > Schedule Settings*, which has three tabs.'),
+        h2('Destinations tab'),
+        p('Each card shows a status label (**Not connected** or **Connected**), the destination name, and how many schedules use it, or *No schedules yet*. Destinations that are not available yet show a **Coming soon** label. Search by name or tick **Show connected only**. A line at the bottom shows which destination new schedules use by default, with a **Manage defaults** link.'),
+        image('delivery-options-destinations.png', 'Schedule Settings: Destinations tab', { width: 640, center: true }),
+        h2('Defaults tab'),
+        p('Set the starting choices for every new schedule: **Default destination**, **Backup destination** (used if the main destination fails), **File type**, **Time zone** and a **File name pattern**. An example under the pattern shows the result. Select **Save defaults** to keep your changes, or **Reset** to undo them.'),
+        image('delivery-options-defaults.png', 'Schedule Settings: Defaults tab', { width: 620, center: true }),
+        h2('Delivery history tab'),
+        p('Every delivery attempt is listed with its **Report**, **Destination**, **Time**, **Status** and **Size**. Use the **All destinations** and **All statuses** filters to narrow the list.'),
+        image('delivery-options-history.png', 'Schedule Settings: Delivery history tab', { width: 620, center: true }),
       ],
     },
     {

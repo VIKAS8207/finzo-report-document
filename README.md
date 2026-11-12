@@ -86,6 +86,10 @@ Open the file for that section in `src/content/sections/` and edit or add an ent
 }
 ```
 
+### Add or update an integration
+Edit `src/content/integrations.js`. Each entry becomes a page in the **Integrations** sidebar section and a row in the overview table.
+Set `status` (`Live` / `Coming soon` / `Connected`), `introduced` (release date) and `planned` (planned date) — the last two show in the right panel.
+
 ### Add a new section
 1. Create `src/content/sections/my-section.js` (copy an existing one — it exports `{ title, icon, pages }`).
 2. Import it in `src/content/index.js` and add it to `SECTIONS` (order = sidebar order).

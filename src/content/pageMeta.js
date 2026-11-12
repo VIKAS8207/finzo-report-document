@@ -6,6 +6,7 @@
 export const UPDATED = 'Nov 10, 2026'
 
 export const pageMeta = {
+  'integrations-overview': { summary: 'The 15 apps you can connect to bring their data into reports. Each integration has its own page with its status and release dates.' },
   welcome: { summary: 'An overview of Reports Builder and a four-step path through the docs: Getting Started, Reports, Schedules, then FAQ.' },
   'first-time-setup': { summary: 'Two skippable setup screens after install: add your report email and phone, then pick your store type. The first data sync starts on its own.' },
   'navigation-bar': { summary: 'The top bar has a title area, the dark navigation pill with the main menu, and small controls. The Create new report button changes depending on the page you are on.' },

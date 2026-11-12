@@ -42,6 +42,7 @@ export default {
             ['Library', 'The template catalog', 'Find a ready-made report or start a new one'],
             ['My Reports', 'Your saved reports', 'Reopen, favorite, schedule or delete a report'],
             ['Schedule', 'The schedule list', 'Set up and manage automatic deliveries'],
+            ['Integrations', 'The integration catalog', 'Browse apps you can connect to your reports'],
             ['Settings', 'The settings area', 'Manage account, data, formatting, team and billing'],
           ],
         ),

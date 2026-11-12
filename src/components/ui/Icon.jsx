@@ -1,4 +1,15 @@
-import { Bot, CalendarClock, ChartColumn, CircleHelp, CreditCard, Database, Rocket, Settings, Sparkles } from 'lucide-react'
+import {
+  Bot,
+  CalendarClock,
+  ChartColumn,
+  CircleHelp,
+  CreditCard,
+  Database,
+  Plug,
+  Rocket,
+  Settings,
+  Sparkles,
+} from 'lucide-react'
 
 /**
  * Icon registry
@@ -6,7 +17,7 @@ import { Bot, CalendarClock, ChartColumn, CircleHelp, CreditCard, Database, Rock
  * Content files refer to icons by name (e.g. `icon: 'Rocket'`).
  * To use a new Lucide icon in the content, import it here and add it to ICONS.
  */
-const ICONS = { Sparkles, Rocket, ChartColumn, CalendarClock, Database, Settings, CreditCard, Bot, CircleHelp }
+const ICONS = { Sparkles, Rocket, ChartColumn, CalendarClock, Plug, Database, Settings, CreditCard, Bot, CircleHelp }
 
 /**
  * @param {{ name: string, className?: string }} props

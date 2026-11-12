@@ -13,6 +13,7 @@ import welcome from './sections/welcome'
 import gettingStarted from './sections/getting-started'
 import reports from './sections/reports'
 import schedules from './sections/schedules'
+import integrations from './sections/integrations'
 import data from './sections/data'
 import settingsAndTeam from './sections/settings-and-team'
 import plansAndBilling from './sections/plans-and-billing'
@@ -28,6 +29,7 @@ export const SECTIONS = [
   gettingStarted,
   reports,
   schedules,
+  integrations,
   data,
   settingsAndTeam,
   plansAndBilling,
